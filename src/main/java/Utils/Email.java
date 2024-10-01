@@ -19,7 +19,7 @@ import jakarta.mail.internet.MimeUtility;
 public class Email {
 
     static final String username = "Company post";
-    static final String from = "letankim0602@gmail.com";
+    static final String from = "demo@gmail.com";
     static final String password = "eayaebdoyiohugat";
 
     public boolean sendEmail(String to, String title, String content, String reply) {
