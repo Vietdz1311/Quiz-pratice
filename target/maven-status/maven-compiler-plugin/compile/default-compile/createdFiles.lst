@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+Utils\Email.class
+Model\Student.class
+Controller\Admin\Student\DeleteStudentController.class
+Controller\Admin\Student\EditStudentController.class
+Utils\Email$1.class
+Controller\Admin\Admin\AdminController.class
+DAO\StudentDAO.class
+Utils\Upload.class
+Controller\Auth\AdminLogoutController.class
+Utils\GetActiveAssignment.class
+Controller\Admin\Student\ListStudentsController.class
+DAO\AdminDAO.class
+Utils\Generate.class
+Controller\Admin\Student\AddStudentController.class
+Utils\Validation.class
+Controller\Auth\LoginController.class
+Model\Admin.class
+=======
+Controller\Admin\Teacher\AddTeacherController.class
+Utils\Email.class
+Model\Teacher.class
+Utils\Email$1.class
+Controller\Admin\Admin\AdminController.class
+Utils\Upload.class
+Controller\Admin\Teacher\DeleteTeacherController.class
+Controller\Auth\AdminLogoutController.class
+Utils\GetActiveAssignment.class
+DAO\AdminDAO.class
+Controller\Admin\Teacher\ListTeachersController.class
+DAO\TeacherDAO.class
+Utils\Generate.class
+Utils\Validation.class
+Controller\Auth\LoginController.class
+Model\Admin.class
+Controller\Admin\Teacher\EditTeacherController.class
+>>>>>>> origin/MinhIter1
+DBConnection\DBConnection.class
+=======
 DAO\SemesterDAO.class
 Utils\Email.class
 Controller\Admin\Semester\ListSemestersController.class
@@ -16,3 +56,4 @@ Controller\Auth\LoginController.class
 Model\Admin.class
 DBConnection\DBConnection.class
 Controller\Admin\Semester\DeleteSemesterController.class
+>>>>>>> origin/ThiIter1

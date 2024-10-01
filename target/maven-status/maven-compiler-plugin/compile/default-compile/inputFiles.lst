@@ -1,3 +1,34 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Auth\LoginController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Auth\AdminLogoutController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Utils\Generate.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Utils\Validation.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Admin\Admin\AdminController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Admin\Course\AddCourseController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Utils\Email.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Model\Admin.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\DAO\AdminDAO.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Utils\Upload.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\DBConnection\DBConnection.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Admin\Course\ListCourseController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Admin\Course\EditCourseController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Model\Course.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\DAO\CourseDAO.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Controller\Admin\Course\DeleteCourseController.java
+D:\FA24\SWP391\Quiz-pratice\src\main\java\Utils\GetActiveAssignment.java
+=======
+D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Teacher\AddTeacherController.java
+D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Admin\AdminController.java
+D:\SWP\Quiz-pratice\src\main\java\Controller\Auth\LoginController.java
+D:\SWP\Quiz-pratice\src\main\java\Controller\Auth\AdminLogoutController.java
+D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Teacher\EditTeacherController.java
+D:\SWP\Quiz-pratice\src\main\java\Utils\GetActiveAssignment.java
+D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Teacher\DeleteTeacherController.java
+D:\SWP\Quiz-pratice\src\main\java\Model\Teacher.java
+D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Teacher\ListTeachersController.java
+D:\SWP\Quiz-pratice\src\main\java\DAO\TeacherDAO.java
+=======
 D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Semester\AddSemesterController.java
 D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Admin\AdminController.java
 D:\SWP\Quiz-pratice\src\main\java\Controller\Auth\LoginController.java
@@ -5,13 +36,20 @@ D:\SWP\Quiz-pratice\src\main\java\Controller\Auth\AdminLogoutController.java
 D:\SWP\Quiz-pratice\src\main\java\Utils\GetActiveAssignment.java
 D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Semester\EditSemesterController.java
 D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Semester\ListSemestersController.java
+>>>>>>> origin/ThiIter1
 D:\SWP\Quiz-pratice\src\main\java\Utils\Email.java
 D:\SWP\Quiz-pratice\src\main\java\Utils\Upload.java
 D:\SWP\Quiz-pratice\src\main\java\DAO\AdminDAO.java
 D:\SWP\Quiz-pratice\src\main\java\DBConnection\DBConnection.java
 D:\SWP\Quiz-pratice\src\main\java\Utils\Validation.java
+<<<<<<< HEAD
+D:\SWP\Quiz-pratice\src\main\java\Model\Admin.java
+D:\SWP\Quiz-pratice\src\main\java\Utils\Generate.java
+>>>>>>> origin/MinhIter1
+=======
 D:\SWP\Quiz-pratice\src\main\java\DAO\SemesterDAO.java
 D:\SWP\Quiz-pratice\src\main\java\Model\Semester.java
 D:\SWP\Quiz-pratice\src\main\java\Model\Admin.java
 D:\SWP\Quiz-pratice\src\main\java\Utils\Generate.java
 D:\SWP\Quiz-pratice\src\main\java\Controller\Admin\Semester\DeleteSemesterController.java
+>>>>>>> origin/ThiIter1
