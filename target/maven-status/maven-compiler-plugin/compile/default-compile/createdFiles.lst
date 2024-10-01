@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Utils\Email.class
 Model\Student.class
 Controller\Admin\Student\DeleteStudentController.class
@@ -36,3 +37,23 @@ Model\Admin.class
 Controller\Admin\Teacher\EditTeacherController.class
 >>>>>>> origin/MinhIter1
 DBConnection\DBConnection.class
+=======
+DAO\SemesterDAO.class
+Utils\Email.class
+Controller\Admin\Semester\ListSemestersController.class
+Controller\Admin\Semester\AddSemesterController.class
+Utils\Email$1.class
+Controller\Admin\Admin\AdminController.class
+Utils\Upload.class
+Controller\Auth\AdminLogoutController.class
+Utils\GetActiveAssignment.class
+DAO\AdminDAO.class
+Controller\Admin\Semester\EditSemesterController.class
+Utils\Generate.class
+Utils\Validation.class
+Model\Semester.class
+Controller\Auth\LoginController.class
+Model\Admin.class
+DBConnection\DBConnection.class
+Controller\Admin\Semester\DeleteSemesterController.class
+>>>>>>> origin/ThiIter1
