@@ -22,7 +22,7 @@
                     </div>
                     <div class="card mt-5">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Login admin</h5>
+                            <h5 class="card-title text-center">Login</h5>
                             <c:if test="${param.error != null}">
                                 <div class="alert alert-danger" role="alert">
                                     ${param.error}
