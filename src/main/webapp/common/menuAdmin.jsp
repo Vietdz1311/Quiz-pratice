@@ -46,12 +46,6 @@
                         <span class="ttr-label">Classes</span>
                     </a>
                 </li>
-                <li>
-                    <a href="AdminController" class="ttr-material-button">
-                        <span class="ttr-icon"><i class="ti-settings"></i></span>
-                        <span class="ttr-label">Admin</span>
-                    </a>
-                </li>
             </ul>
         </nav>
     </div>

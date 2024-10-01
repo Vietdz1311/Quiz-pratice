@@ -6,7 +6,7 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:if test="${sessionScope.adminLogin == null}">
+<c:if test="${sessionScope.adminLogin == null || sessionScope.adminRole != 0 }">
     <c:redirect url="LoginController" />
 </c:if>
 <%@include file="../../common/head.jsp" %>

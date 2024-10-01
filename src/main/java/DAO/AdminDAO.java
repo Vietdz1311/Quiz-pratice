@@ -64,6 +64,7 @@ public class AdminDAO {
                 admin.setPhone(resultSet.getString("phone"));
                 admin.setStatus(resultSet.getInt("status"));
                 admin.setPassword(resultSet.getString("password"));
+                admin.setRole(resultSet.getInt("role"));
                 return admin;
             }
         } catch (SQLException e) {
@@ -114,7 +115,7 @@ public class AdminDAO {
     }
 
     public int addAdmin(Admin admin) {
-        String query = "INSERT INTO Admin (email, phone, password, status, name) VALUES (?, ?, ?, ?, ?)";
+        String query = "INSERT INTO Admin (email, phone, password, status, name, role) VALUES (?, ?, ?, ?, ?, 0)";
         try ( PreparedStatement statement = conn.prepareStatement(query)) {
             statement.setString(1, admin.getEmail());
             statement.setString(2, admin.getPhone());

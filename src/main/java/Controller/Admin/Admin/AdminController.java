@@ -21,7 +21,7 @@ import java.util.List;
  *
  * @author HP
  */
-@WebServlet(name = "AdminController", urlPatterns = {"/AdminController"})
+@WebServlet(name = "AdminController", urlPatterns = {"/managerController"})
 public class AdminController extends HttpServlet {
 
     /**
@@ -63,7 +63,7 @@ public class AdminController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession session = request.getSession();
-        if(session.getAttribute("adminLogin") == null) {
+        if(session.getAttribute("adminLogin") == null  || (session.getAttribute("adminLogin") != null && Integer.parseInt(session.getAttribute("adminRole") + "") != 1)) {
             response.sendRedirect("LoginController?error=Your account can not login here");
             return;
         }
@@ -82,10 +82,10 @@ public class AdminController extends HttpServlet {
                     request.setAttribute("currentAdmin", currentAdmin);
                     request.getRequestDispatcher("./admin/admin/edit.jsp").forward(request, response);
                 } else {
-                    response.sendRedirect("AdminController?error=Can not found this account");
+                    response.sendRedirect("managerController?error=Can not found this account");
                 }
             } catch (Exception e) {
-                response.sendRedirect("AdminController?error=Admin id is not valid");
+                response.sendRedirect("managerController?error=Admin id is not valid");
             }
             break;
             case "update-profile":
@@ -98,15 +98,15 @@ public class AdminController extends HttpServlet {
                 if (currentAdmin != null) {
                     int result = adminDao.deleteAdmin(idAdmin);
                     if (result > 0) {
-                        response.sendRedirect("AdminController?success=Delete account successfully");
+                        response.sendRedirect("managerController?success=Delete account successfully");
                     } else {
-                        response.sendRedirect("AdminController?error=Delete account fail");
+                        response.sendRedirect("managerController?error=Delete account fail");
                     }
                 } else {
-                    response.sendRedirect("AdminController?error=Can not found this account");
+                    response.sendRedirect("managerController?error=Can not found this account");
                 }
             } catch (Exception e) {
-                response.sendRedirect("AdminController?error=Admin id is not valid");
+                response.sendRedirect("managerController?error=Admin id is not valid");
             }
             break;
             default:
@@ -154,12 +154,12 @@ public class AdminController extends HttpServlet {
             try {
                 idAdminNumber = Integer.parseInt(idAdmin);
             } catch (NumberFormatException e) {
-                response.sendRedirect("AdminController?error=Admin id is not valid");
+                response.sendRedirect("managerController?error=Admin id is not valid");
                 return;
             }
             if (name == null || email == null || phone == null || statusStr == null
                     || name.isEmpty() || email.isEmpty() || phone.isEmpty() || statusStr.isEmpty()) {
-                response.sendRedirect("AdminController?action=edit&adminID=" + idAdmin + "&error=Please fill all field");
+                response.sendRedirect("managerController?action=edit&adminID=" + idAdmin + "&error=Please fill all field");
                 return;
             }
 
@@ -171,40 +171,40 @@ public class AdminController extends HttpServlet {
             try {
                 status = Integer.parseInt(statusStr);
             } catch (NumberFormatException e) {
-                response.sendRedirect("AdminControlleraction=edit&adminID=" + idAdmin + "&error=Invalid status");
+                response.sendRedirect("managerController=edit&adminID=" + idAdmin + "&error=Invalid status");
                 return;
             }
             Validation validate = new Validation();
             if (!validate.isValidEmail(email)) {
-                response.sendRedirect("AdminController?action=edit&adminID=" + idAdmin + "&error=Invalid email");
+                response.sendRedirect("managerController?action=edit&adminID=" + idAdmin + "&error=Invalid email");
                 return;
             }
 
             if (!validate.isValidPhoneNumber(phone)) {
-                response.sendRedirect("AdminController?action=edit&adminID=" + idAdmin + "&error=Invalid phone");
+                response.sendRedirect("managerController?action=edit&adminID=" + idAdmin + "&error=Invalid phone");
                 return;
             }
 
             if (!(password.length() > 7) || password.contains(" ")) {
-                response.sendRedirect("AdminController?action=edit&adminID=" + idAdmin + "&error=Password must be from 8 character and no space");
+                response.sendRedirect("managerController?action=edit&adminID=" + idAdmin + "&error=Password must be from 8 character and no space");
                 return;
             }
 
             AdminDAO adminDao = new AdminDAO();
             if (adminDao.isEmailExists(email, idAdminNumber)) {
-                response.sendRedirect("AdminController?action=edit&adminID=" + idAdmin + "&error=Email exists");
+                response.sendRedirect("managerController?action=edit&adminID=" + idAdmin + "&error=Email exists");
                 return;
             }
             if (adminDao.isPhoneExists(phone, idAdminNumber)) {
-                response.sendRedirect("AdminController?action=edit&adminID=" + idAdmin + "&error=Ehone exists");
+                response.sendRedirect("managerController?action=edit&adminID=" + idAdmin + "&error=Ehone exists");
                 return;
             }
             Admin admin = new Admin(idAdminNumber, name, email, phone, password, status);
             int result = adminDao.updateAdmin(admin);
             if (result > 0) {
-                response.sendRedirect("AdminController?&success=Update successfully");
+                response.sendRedirect("managerController?&success=Update successfully");
             } else {
-                response.sendRedirect("AdminController?&error=Update fail");
+                response.sendRedirect("managerController?&error=Update fail");
             }
         } catch (Exception e) {
             System.out.println("Error: " + e);
@@ -221,7 +221,7 @@ public class AdminController extends HttpServlet {
 
             if (name == null || email == null || phone == null || statusStr == null
                     || name.isEmpty() || email.isEmpty() || phone.isEmpty() || statusStr.isEmpty()) {
-                response.sendRedirect("AdminController?action=add&error=Please fill all field");
+                response.sendRedirect("managerController?action=add&error=Please fill all field");
                 return;
             }
 
@@ -229,40 +229,40 @@ public class AdminController extends HttpServlet {
             try {
                 status = Integer.parseInt(statusStr);
             } catch (NumberFormatException e) {
-                response.sendRedirect("AdminController?action=add&error=Invalid status");
+                response.sendRedirect("managerController?action=add&error=Invalid status");
                 return;
             }
             Validation validate = new Validation();
             if (!validate.isValidEmail(email)) {
-                response.sendRedirect("AdminController?action=add&error=Invalid email");
+                response.sendRedirect("managerController?action=add&error=Invalid email");
                 return;
             }
 
             if (!validate.isValidPhoneNumber(phone)) {
-                response.sendRedirect("AdminController?action=add&error=Invalid phone");
+                response.sendRedirect("managerController?action=add&error=Invalid phone");
                 return;
             }
 
             if (!(password.length() > 7) || password.contains(" ")) {
-                response.sendRedirect("AdminController?action=add&error=Password must be from 8 character and no space");
+                response.sendRedirect("managerController?action=add&error=Password must be from 8 character and no space");
                 return;
             }
 
             AdminDAO adminDao = new AdminDAO();
             if (adminDao.isEmailExists(email, 0)) {
-                response.sendRedirect("AdminController?action=add&error=Email exists");
+                response.sendRedirect("managerController?action=add&error=Email exists");
                 return;
             }
             if (adminDao.isPhoneExists(phone, 0)) {
-                response.sendRedirect("AdminController?action=add&error=Ehone exists");
+                response.sendRedirect("managerController?action=add&error=Ehone exists");
                 return;
             }
             Admin admin = new Admin(0, name, email, phone, password, status);
             int result = adminDao.addAdmin(admin);
             if (result > 0) {
-                response.sendRedirect("AdminController?&success=Add new successfully");
+                response.sendRedirect("managerController?&success=Add new successfully");
             } else {
-                response.sendRedirect("AdminController?&error=Add new fail");
+                response.sendRedirect("managerController?&error=Add new fail");
             }
         } catch (Exception e) {
             System.out.println("Error: " + e);

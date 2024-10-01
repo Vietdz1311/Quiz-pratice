@@ -6,10 +6,10 @@
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-        <%@include file="../component/header.jsp" %>
+     <%@ include file="../component/headerManager.jsp" %>
         <div class="container mt-4 ttr-wrapper">
             <h2 class="mb-4">List of Admins</h2>
-            <a href="AdminController?action=add" class="btn btn-primary mb-4">Add admin</a>
+            <a href="managerController?action=add" class="btn btn-primary mb-4">Add admin</a>
             <c:if test="${param.error != null}">
                 <div class="alert alert-danger" role="alert">
                     ${param.error}
@@ -48,8 +48,8 @@
                                     </c:if>
                                 </td>
                                 <td>
-                                    <a href="AdminController?action=edit&adminID=${admin.id}" class="btn btn-warning">Edit</a>
-                                    <a onClick="return confirm('Are your sure to delete it?')" href="AdminController??action=delete&adminID=${admin.id}" class="btn btn-danger">Delete</a>
+                                    <a href="managerController?action=edit&adminID=${admin.id}" class="btn btn-warning">Edit</a>
+                                    <a onClick="return confirm('Are your sure to delete it?')" href="managerController?action=delete&adminID=${admin.id}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         </c:if>

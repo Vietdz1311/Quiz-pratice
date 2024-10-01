@@ -16,6 +16,7 @@ public class Admin {
     private String phone;
     private String password;
     private int status;
+    private int role;
 
     public Admin() {
     }
@@ -75,5 +76,13 @@ public class Admin {
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
     }
 }

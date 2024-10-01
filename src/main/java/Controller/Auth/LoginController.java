@@ -83,7 +83,12 @@ public class LoginController extends HttpServlet {
             if (admminLogin.getStatus() == 1) {
                 HttpSession session = request.getSession();
                 session.setAttribute("adminLogin", admminLogin);
-                response.sendRedirect("ListStudentsController");
+                session.setAttribute("adminRole", admminLogin.getRole());
+                if(admminLogin.getRole()  == 1) {
+                    response.sendRedirect("managerController");
+                } else {
+                    response.sendRedirect("ListStudentsController");
+                }
                 return;
             } else {
                 message = "Your account is looked";
