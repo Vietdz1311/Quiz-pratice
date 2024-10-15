@@ -32,9 +32,9 @@
             </tr>
         </thead>
         <tbody>
-            <c:forEach var="teacher" items="${teachers}">
+            <c:forEach var="teacher" items="${teachers}" varStatus="index">
                 <tr>
-                    <td>${teacher.teacherID}</td>
+                    <td>${index.index + 1}</td>
                     <td>${teacher.name}</td>
                     <td>${teacher.email}</td>
                     <td>${teacher.phone}</td>

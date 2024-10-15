@@ -31,9 +31,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach var="course" items="${courses}">
+                    <c:forEach var="course" items="${courses}" varStatus="index">
                         <tr>
-                            <td>${course.courseID}</td>
+                            <td>${index.index + 1}</td>
                             <td>${course.courseName}</td>
                             <td>${course.courseCode}</td>
                             <td>${course.status == 1 ? 'Active' : 'Inactive'}</td>

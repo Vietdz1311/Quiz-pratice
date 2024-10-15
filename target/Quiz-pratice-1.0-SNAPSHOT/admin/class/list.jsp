@@ -35,11 +35,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach var="cla" items="${classes}">
+                    <c:forEach var="cla" items="${classes}" varStatus="index">
                         <c:set value="${getTeacher.getTeacher(cla.teacherID)}" var="teacher" />
                         <c:set value="${getCourse.getCourse(cla.courseID)}" var="course" />
                         <tr>
-                            <td>${cla.classID}</td>
+                            <td>${index.index + 1}</td>
                             <td>${cla.className}</td>
                             <td>${cla.status == 1 ? 'Active' : 'Inactive'}</td>
                             <td>${teacher.name}</td>

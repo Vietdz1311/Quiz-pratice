@@ -31,9 +31,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach var="student" items="${students}">
+                    <c:forEach var="student" items="${students}" varStatus="index">
                         <tr>
-                            <td>${student.studentID}</td>
+                            <td>${index.index + 1}</td>
                             <td>${student.name}</td>
                             <td>${student.email}</td>
                             <td>${student.phone}</td>

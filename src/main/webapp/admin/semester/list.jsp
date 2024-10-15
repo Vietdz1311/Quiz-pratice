@@ -31,9 +31,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <c:forEach var="semester" items="${semesters}">
+                    <c:forEach var="semester" items="${semesters}" varStatus="index">
                         <tr>
-                            <td>${semester.semesterID}</td>
+                            <td>${index.index + 1}</td>
                             <td>${semester.semesterName}</td>
                             <td>${semester.year}</td>
                             <td>${semester.status == 1 ? "Active" : "Inactive"}</td>
