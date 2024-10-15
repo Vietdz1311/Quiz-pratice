@@ -28,6 +28,18 @@
                         <span class="ttr-label">Assignment</span>
                     </a>
                 </li>
+                <li>
+                    <a href="QuestionBankController" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-book"></i></span>
+                        <span class="ttr-label">Question bank</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="ExamController" class="ttr-material-button">
+                        <span class="ttr-icon"><i class="ti-book"></i></span>
+                        <span class="ttr-label">Exam</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </div>
